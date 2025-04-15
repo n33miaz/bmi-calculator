@@ -1,15 +1,22 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, Image, StyleSheet, Dimensions } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Image,
+  StyleSheet,
+  Dimensions,
+} from "react-native";
 import { Link } from "expo-router";
 import { BotaoCustomizado } from "../components/BotaoCustomizado";
 import { estilosGlobais } from "../constants/Estilos";
 import { cores } from "../constants/Cores";
 
-const { width } = Dimensions.get('window');
-const buttonWidth = width * 0.4; // 40% da largura da tela
+const { width } = Dimensions.get("window");
+const buttonWidth = width * 0.4;
 
 export default function TelaSelecaoGenero() {
-  const [genero, setGenero] = useState<'masculino' | 'feminino' | null>(null);
+  const [genero, setGenero] = useState<"masculino" | "feminino" | null>(null);
 
   return (
     <View style={estilosGlobais.container}>
@@ -20,7 +27,7 @@ export default function TelaSelecaoGenero() {
         <TouchableOpacity
           style={[
             styles.botaoGenero,
-            { width: buttonWidth, height: buttonWidth }, // Tamanho responsivo
+            { width: buttonWidth, height: buttonWidth },
             genero === "masculino" && styles.botaoGeneroSelecionado,
           ]}
           onPress={() => setGenero("masculino")}
@@ -36,7 +43,7 @@ export default function TelaSelecaoGenero() {
         <TouchableOpacity
           style={[
             styles.botaoGenero,
-            { width: buttonWidth, height: buttonWidth }, // Tamanho responsivo
+            { width: buttonWidth, height: buttonWidth },
             genero === "feminino" && styles.botaoGeneroSelecionado,
           ]}
           onPress={() => setGenero("feminino")}
@@ -72,7 +79,7 @@ const styles = StyleSheet.create({
   },
   botaoGenero: {
     alignItems: "center",
-    justifyContent: 'center',
+    justifyContent: "center",
     padding: 15,
     borderRadius: 15,
     backgroundColor: cores.cinzaClaro,
@@ -84,8 +91,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#d6e4ff",
   },
   iconeGenero: {
-    width: '60%', // Proporcional ao botão
-    height: '60%', // Proporcional ao botão
+    width: "60%",
+    height: "60%",
     marginBottom: 10,
   },
   textoGenero: {

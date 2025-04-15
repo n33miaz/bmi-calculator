@@ -6,7 +6,7 @@ interface Props {
   placeholder: string;
   valor: string;
   onChangeText: (texto: string) => void;
-  tipoTeclado?: 'default' | 'numeric' | 'email-address' | 'phone-pad';
+  tipoTeclado?: "default" | "numeric" | "email-address" | "phone-pad";
   editavel?: boolean;
 }
 
@@ -15,7 +15,7 @@ export function CampoEntrada({
   placeholder,
   valor,
   onChangeText,
-  tipoTeclado = 'default',
+  tipoTeclado = "default",
   editavel = true,
 }: Props) {
   return (
@@ -47,15 +47,15 @@ const estilos = StyleSheet.create({
   input: {
     borderWidth: 1,
     borderColor: cores.cinza,
-    borderRadius: 8, // Ajustado
-    paddingVertical: 12, // Ajustado
-    paddingHorizontal: 15, // Ajustado
-    backgroundColor: cores.branco, // Fundo branco
-    fontSize: 16, // Tamanho da fonte
+    borderRadius: 8,
+    paddingVertical: 12,
+    paddingHorizontal: 15,
+    backgroundColor: cores.branco,
+    fontSize: 16,
     color: cores.texto,
   },
   inputDesabilitado: {
-      backgroundColor: cores.cinzaClaro,
-      color: cores.cinzaEscuro,
-  }
+    backgroundColor: cores.cinzaClaro,
+    color: cores.cinzaEscuro,
+  },
 });

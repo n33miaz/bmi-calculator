@@ -3,10 +3,10 @@ import { cores } from "../constants/Cores";
 
 interface Props {
   texto: string;
-  onPress?: () => void; // Tornando onPress opcional, pois o Link o controla
+  onPress?: () => void;
 }
 
-const { width } = Dimensions.get('window');
+const { width } = Dimensions.get("window");
 
 export function BotaoCustomizado({ texto, onPress }: Props) {
   return (
@@ -19,14 +19,14 @@ export function BotaoCustomizado({ texto, onPress }: Props) {
 const estilos = StyleSheet.create({
   botao: {
     backgroundColor: cores.azul,
-    paddingVertical: 15, // Um pouco mais de padding
+    paddingVertical: 15,
     paddingHorizontal: 20,
-    borderRadius: 10, // Menos arredondado
-    marginTop: 25, // Mais espaço acima
-    marginBottom: 10, // Espaço abaixo
+    borderRadius: 10,
+    marginTop: 25,
+    marginBottom: 10,
     alignItems: "center",
-    width: width * 0.85, // 85% da largura
-    alignSelf: 'center',
+    width: width * 0.85,
+    alignSelf: "center",
     elevation: 2,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 1 },
@@ -37,6 +37,6 @@ const estilos = StyleSheet.create({
     color: cores.branco,
     fontWeight: "bold",
     fontSize: 18,
-    textTransform: 'uppercase', // Texto em maiúsculas
+    textTransform: "uppercase",
   },
 });

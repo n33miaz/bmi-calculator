@@ -25,7 +25,9 @@ export default function TelaResultado() {
         <Text style={styles.tituloResultado}>Seu Resultado</Text>
 
         <View style={styles.cardResultado}>
-          <Text style={[styles.labelClassificacao, { color: corClassificacao }]}>
+          <Text
+            style={[styles.labelClassificacao, { color: corClassificacao }]}
+          >
             {classificacao.toUpperCase()}
           </Text>
           <Text style={styles.valorIMC}>{imc.toFixed(1)}</Text>
@@ -34,13 +36,14 @@ export default function TelaResultado() {
           <Text style={styles.textoFaixaNormal}>18.5 - 24.9 kg/m2</Text>
 
           <Image
-              source={require('../assets/bmibar.png')}
-              style={styles.imagemBarra}
-              resizeMode="contain"
+            source={require("../assets/bmibar.png")}
+            style={styles.imagemBarra}
+            resizeMode="contain"
           />
 
           <Text style={styles.textoResumo}>
-            Seu IMC está na faixa considerada normal. Continue mantendo hábitos saudáveis!
+            Seu IMC está na faixa considerada normal. Continue mantendo hábitos
+            saudáveis!
           </Text>
           <Text style={styles.dadosInseridos}>{resumoDados}</Text>
         </View>
@@ -53,19 +56,9 @@ export default function TelaResultado() {
   );
 }
 
-// Adicionando cores faltantes em Colors.ts se necessário
-// Exemplo:
-// export const cores = {
-//   ...
-//   verde: '#2ECC71',
-//   amarelo: '#F1C40F',
-//   laranja: '#E67E22',
-//   vermelho: '#E74C3C',
-// };
-
 const styles = StyleSheet.create({
   tituloResultado: {
-    fontSize: 28, // Um pouco menor
+    fontSize: 28,
     fontWeight: "bold",
     color: cores.azul,
     marginBottom: 20,
@@ -74,7 +67,7 @@ const styles = StyleSheet.create({
   cardResultado: {
     backgroundColor: cores.branco,
     borderRadius: 15,
-    paddingVertical: 25, // Mais padding vertical
+    paddingVertical: 25,
     paddingHorizontal: 20,
     marginVertical: 20,
     alignItems: "center",
@@ -86,45 +79,45 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
   },
   labelClassificacao: {
-    fontSize: 18, // Ajustado
+    fontSize: 18,
     fontWeight: "bold",
-    marginBottom: 10, // Reduzido
-    textAlign: 'center',
+    marginBottom: 10,
+    textAlign: "center",
   },
   valorIMC: {
-    fontSize: 65, // Ajustado
+    fontSize: 65,
     fontWeight: "bold",
     color: cores.azul,
-    marginBottom: 20, // Reduzido
+    marginBottom: 20,
   },
   labelFaixaNormal: {
     fontSize: 15,
-    color: cores.cinzaEscuro, // Cor mais suave
+    color: cores.cinzaEscuro,
     marginBottom: 4,
   },
   textoFaixaNormal: {
     fontSize: 16,
     color: cores.texto,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 20,
   },
   imagemBarra: {
-      width: '100%',
-      height: 30, // Barra mais fina
-      marginVertical: 15, // Reduzido
+    width: "100%",
+    height: 30,
+    marginVertical: 15,
   },
   textoResumo: {
-    fontSize: 15, // Levemente menor
+    fontSize: 15,
     color: cores.texto,
     textAlign: "center",
-    lineHeight: 21, // Ajustado
-    marginTop: 15, // Reduzido
+    lineHeight: 21,
+    marginTop: 15,
     marginBottom: 15,
   },
   dadosInseridos: {
-      fontSize: 14,
-      color: cores.cinzaEscuro,
-      marginTop: 10,
-      fontStyle: 'italic',
-  }
+    fontSize: 14,
+    color: cores.cinzaEscuro,
+    marginTop: 10,
+    fontStyle: "italic",
+  },
 });
